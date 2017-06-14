@@ -11,10 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <sec:csrfMetaTags />
-    <!--
+    
         <meta name="_csrf" content="${_csrf.token}"/>
         <meta name="_csrf_header" content="${_csrf.headerName}"/>
-    -->
+    
 
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Spring Boot CSRF Sample</title>
@@ -45,6 +45,7 @@
             <h4>POST without CSRF-token</h4>
             <p>No CSRF-token</p>
             <form action="${postUrl}" method="post">
+            	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}-000"/>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
