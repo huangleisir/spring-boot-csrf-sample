@@ -45,6 +45,16 @@
             <h4>POST without CSRF-token</h4>
             <p>No CSRF-token</p>
             <form action="${postUrl}" method="post">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="row marketing">
+        <div class="col-lg-4">
+            <h4>POST without WRONG - token</h4>
+            <p>No CSRF-token</p>
+            <form action="${postUrl}" method="post">
             	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}-000"/>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
