@@ -27,7 +27,7 @@
             </fieldset>
             <input type="submit" id="login" value="Login" class="btn btn-primary" />
         </form>
-        current csrf_token:  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        current csrf_token:  <input  name="${_csrf.parameterName}" value="${_csrf.token}"/>
     </div>
 </div>
 </body>
